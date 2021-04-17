@@ -1,12 +1,6 @@
 import { combineReducers } from 'redux';
-import { userDataEndpointURL } from '..constants/';
-
-const usersReducer = () => {
-    axios.get(userDataEndpointURL).then((response) => {
-        return response;
-    });
-}
+import { userDataReducer } from './userDataReducer';
 
 export default combineReducers({
-    users: usersReducer
-});
+    userData: userDataReducer
+ });
