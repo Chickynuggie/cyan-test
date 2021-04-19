@@ -1,10 +1,18 @@
-import React from 'React';
+import React from 'react';
+import { connect } from 'react-redux';
+import { selectUser } from '../actions';
 
 class AccountList extends React.Component {
 
     render() {
-        return null;
+        return <div className='account-list' onClick={() => this.props.selectUser("3")}>AccountList</div>;
     }
 }
 
-export default AccountList;
+const mapStateToProps = (state) => {
+    return {
+        usersByPage: state.userData,
+    };
+};
+
+export default connect(mapStateToProps, { selectUser })(AccountList);

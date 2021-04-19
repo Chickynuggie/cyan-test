@@ -1,5 +1,8 @@
-const actionTypes = {
-    GET_USERS: 'GET_USERS'
+const ACTIONTYPES = {
+    GET_USERS: 'GET_USERS',
+    INCREMENT_PAGENO: 'INCREMENT_PAGENO',
+    DECREMENT_PAGENO: 'DECREMENT_PAGENO',
+    SELECT_USER: 'SELECT USER'
 };
 
-export default actionTypes;
+export default ACTIONTYPES;
