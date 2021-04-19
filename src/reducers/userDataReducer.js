@@ -1,6 +1,8 @@
+import actionTypes from '../actions/actionTypes';
+
 export const userDataReducer = (state = [], action) => {
     switch(action.type) {
-        case 'GET_USERS': return [...state, action.payload];
+        case actionTypes.GET_USERS: return [...state, action.payload];
         default: return state;
     }
 }
