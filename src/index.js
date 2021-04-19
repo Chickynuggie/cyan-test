@@ -6,14 +6,15 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import combineReducers from './reducers';
 
-import AppContainer from './components/AppContainer';
+import AccountsContainer from './components/AccountsContainer';
 
 const store = createStore(combineReducers, applyMiddleware(thunk));
+
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <AppContainer />
+      <AccountsContainer />
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
