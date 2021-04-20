@@ -58,6 +58,11 @@ $animationLength: 0.5s;
                 margin: 0 auto;
                 font-size: 2rem;
                 text-decoration: underline;
+                text-align: center;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                width: 15rem;
             }
         }
 
