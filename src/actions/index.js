@@ -11,7 +11,7 @@ export const getUserData = (pageNumber = 1) => async (dispatch) => {
         dispatch({ type: ACTIONTYPES.GET_USERS , payload: response.data});
         dispatch({ type: ACTIONTYPES.SET_PAGENO , payload: pageNumber});
     } else {
-        dispatch({ type: ACTIONTYPES.NO_MORE_PAGES });
+        dispatch({type: ACTIONTYPES.POP_TOAST, payload: 'No more pages to load.'});
     }
 };
 
@@ -29,17 +29,9 @@ export const clearUserSelection = () => (dispatch) => {
     });
 };
 
-export const goToNextPage = (pageNumber) => (dispatch) => {
+export const popToastMessage = (message) => (dispatch) => {
     dispatch({
-        type: ACTIONTYPES.INCREMENT_PAGENO,
-        payload: pageNumber
+        type: ACTIONTYPES.POP_TOAST,
+        payload: message
     });
-};
-
-export const goToPreviousPage = (pageNumber) => (dispatch) => {
-    dispatch({
-        type: ACTIONTYPES.DECREMENT_PAGENO,
-        payload: pageNumber
-    });
-};
-
+}

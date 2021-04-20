@@ -4,6 +4,7 @@ import { getUserData } from '../actions';
 import Profile from './Profile';
 import AccountList from './AccountList';
 import HeaderWithPagination from './HeaderWithPagination';
+import Toaster from './Toaster';
 
 class AccountsContainer extends React.Component {
 
@@ -15,6 +16,7 @@ class AccountsContainer extends React.Component {
         const currentProfile = this.props.users ? this.props.users.find(user => this.props.currentProfileId === user.id) : null;
 
         return <div className='accounts-container'>
+            <Toaster toastMessage={this.props.toastMessage} />
             <HeaderWithPagination currentPage={this.props.currentPage}/>
             <Profile currentProfile={currentProfile}/>
             <AccountList pagedProfiles={this.props.users}/>
@@ -26,7 +28,8 @@ const mapStateToProps = (state) => {
     return {
         users: state.userData,
         currentProfileId: state.selectedProfileId,
-        currentPage: state.currentPage
+        currentPage: state.currentPage,
+        toastMessage: state.toastMessage
     };
 };
 

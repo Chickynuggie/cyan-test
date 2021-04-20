@@ -1,0 +1,39 @@
+@import './colors.scss';
+@import './utilities.scss';
+
+.toaster {
+    position: fixed;
+    top: 5vh;
+    right: 2rem;
+    width: 20vw;
+    min-height: 10vh;
+    border-radius: 15px;
+    background-color: $lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.25rem;
+    padding: 0.6rem 2rem;
+    color: $mymustard;
+    @include black-shadow;
+    z-index: 4;
+    text-align: center;
+    transition: all;
+    animation: appear .5s ease-in-out;
+
+    &__CTA {
+        margin-top: 1rem;
+        padding: 0.7rem 3rem;
+        background: $mymustard;
+        color: black;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+            background: $lightmustard;
+        }
+    }
+}
