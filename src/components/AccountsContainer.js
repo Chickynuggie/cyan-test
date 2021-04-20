@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { getUserData } from '../actions';
 import Profile from './Profile';
 import AccountList from './AccountList';
+import HeaderWithPagination from './HeaderWithPagination';
 
 class AccountsContainer extends React.Component {
 
@@ -12,12 +13,11 @@ class AccountsContainer extends React.Component {
 
     render() {
         const currentProfile = this.props.users ? this.props.users.find(user => this.props.currentProfileId === user.id) : null;
-        const pageSize = 7;
-        const pagedProfiles = this.props.users.slice((this.props.currentPage - 1) * pageSize, this.props.currentPage * pageSize);
 
         return <div className='accounts-container'>
+            <HeaderWithPagination currentPage={this.props.currentPage}/>
             <Profile currentProfile={currentProfile}/>
-            <AccountList pagedProfiles={pagedProfiles}/>
+            <AccountList pagedProfiles={this.props.users}/>
         </div>;
     }
 }
