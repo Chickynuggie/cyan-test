@@ -1,0 +1,53 @@
+@import './utilities.scss';
+
+.account-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__card {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        border-radius: 10px;
+        margin: 2rem;
+        font-size: 1.25rem;
+        padding: 1rem;
+        width: 23rem;
+        transition: all 0.5s;
+        cursor: pointer;
+        @include black-shadow;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &__top {
+            display: flex;
+            align-items: center;
+
+            &__avatar {
+                border-radius: 100px;
+                border: 2px solid white;
+                width: 6rem;
+                height: 6rem;
+                margin-bottom: 1rem;
+                @include black-shadow;
+            }
+
+            &__info {
+                margin: 0 auto;
+                font-size: 2rem;
+                text-decoration: underline;
+            }
+        }
+
+
+        &__info {
+            display: flex;
+            margin: 0.25rem 0;
+            justify-content: space-between;
+        }
+    }
+}
