@@ -14,12 +14,17 @@ $animationLength: 0.5s;
         flex-direction: column;
         border-radius: 10px;
         margin: 2rem;
-        font-size: 1.25rem;
+        font-size: 4vw;
         padding: 1rem;
-        width: 23rem;
+        width: 80vw;
         transition: all $animationLength;
         cursor: pointer;
         @include black-shadow;
+
+        @media screen and (min-width: 1025px) {
+            width: 23rem;
+            font-size: 1.25rem;
+        }
 
         &:hover {
             transform: scale(1.1);
@@ -48,21 +53,31 @@ $animationLength: 0.5s;
             &__avatar {
                 border-radius: 100px;
                 border: 2px solid white;
-                width: 6rem;
-                height: 6rem;
+                width: 20vw;
+                height: 20vw;
                 margin-bottom: 1rem;
                 @include black-shadow;
+
+                @media screen and (min-width: 1025px) {
+                    width: 6rem;
+                    height: 6rem;
+                }
             }
 
             &__info {
                 margin: 0 auto;
-                font-size: 2rem;
+                font-size: 6vw;
                 text-decoration: underline;
                 text-align: center;
                 text-overflow: ellipsis;
                 overflow: hidden;
                 white-space: nowrap;
-                width: 15rem;
+
+
+                @media screen and (min-width: 1025px) {
+                    width: 15rem;
+                    font-size: 2rem;
+                }
             }
         }
 

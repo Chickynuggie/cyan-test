@@ -12,7 +12,10 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    width: 15rem;
+
+    @media screen and (min-width: 1025px) {
+        width: 15rem;
+    }
 }
 
 @keyframes appear {

@@ -1,11 +1,18 @@
 @import './colors.scss';
 
 .accounts-container {
-    width: 50vw;
+    width: 100vw;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     background-color: $lightgrey;
     z-index: 0;
+    //header placeholder
+    padding-top: 10vh;
+
+    @media screen and (min-width: 1025px) {
+        width: 50vw;
+        padding-top: 0;
+    }
 }
