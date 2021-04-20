@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { selectUser } from '../actions';
+import logo from '../assets/more.svg';
 
 class AccountList extends React.Component {
 
@@ -10,6 +11,7 @@ class AccountList extends React.Component {
                 key={profile.id}
                 className='account-list__card'
                 onClick={() => this.props.selectUser(profile.id.toString())}>
+                    <img alt="details" src={logo} className='account-list__card__details-icon'></img>
                     <div className='account-list__card__top'>
                         <img className='account-list__card__top__avatar' src={`https://randomuser.me/api/portraits/women/${profile.id}.jpg`} alt='avatar' />
                         <div className='account-list__card__top__info'>{profile.name}</div>

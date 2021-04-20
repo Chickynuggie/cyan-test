@@ -33,18 +33,23 @@ $cardheight: 60vh;
             flex-direction: column;
             align-items: center;
 
-            &--left {
+            &--narrow {
                 width: 15vw;
                 display: flex;
                 border-right: 1px solid white;
             }
 
-            &--right {
+            &--wide {
                 font-size: 2rem;
-                width: 90%;
+                width: 50%;
                 padding-top: 0;
-                overflow-y: scroll;
+                overflow-y: auto;
                 overflow-x: hidden;
+                align-items: flex-start;
+            }
+
+            &:last-of-type {
+                border-left: 1px solid white;
             }
         }
 
@@ -60,6 +65,7 @@ $cardheight: 60vh;
             font-size: 2rem;
             margin: 2rem 0;
             font-weight: bold;
+            text-align: center;
         }
 
         &__info {
@@ -69,6 +75,16 @@ $cardheight: 60vh;
             margin: 1rem;
             padding: 1rem;
             width: 90%;
+
+            &--smaller-no-underline {
+                border-bottom: none;
+                font-size: 1.5rem;
+            }
+
+            &--sub {
+                text-decoration: none;
+
+            }
         }
     }
 }
