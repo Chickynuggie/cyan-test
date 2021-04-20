@@ -29,35 +29,63 @@ $cardheight: 60vh;
         background: $lightgrey;
         border-radius: 5px;
         padding: 0;
-        min-height: 500px;
-        min-width: 960px;
+        min-width: auto;
+        width: 90vw;
+        height: 90vh;
         display: flex;
+        flex-direction: column;
+        border: 1px solid white;
+        padding-top: 1vh;
         @include black-shadow;
+
+        @media screen and (min-width: 1024px) {
+            min-height: 500px;
+            min-width: 960px;
+            flex-direction: row;
+            border: 0;
+            padding-top: 0;
+        }
 
         &__column {
             display: flex;
             flex-direction: row;
-            padding: 1rem;
             flex-direction: column;
             align-items: center;
 
+            @media screen and (min-width: 1024px) {
+                padding: 1rem;
+                border: 0;
+            }
+
             &--narrow {
-                width: 15vw;
                 display: flex;
-                border-right: 1px solid white;
+                width: 100%;
+
+                @media screen and (min-width: 1024px) {
+                    width: 15vw;
+                }
             }
 
             &--wide {
-                font-size: 2rem;
-                width: 50%;
+                width: 100%;
                 padding-top: 0;
                 overflow-y: auto;
                 overflow-x: hidden;
                 align-items: flex-start;
+                font-size: 1.5rem;
+                border: 1px solid white;
+
+                @media screen and (min-width: 1024px) {
+                    font-size: 2rem;
+                    width: 50%;
+                    border: 0;
+                }
             }
 
-            &:last-of-type {
-                border-left: 1px solid white;
+            @media screen and (min-width: 1024px) {
+                &:last-of-type {
+                    border-left: 1px solid white;
+                }
             }
         }
 
@@ -79,10 +107,17 @@ $cardheight: 60vh;
         &__info {
             display: flex;
             justify-content: space-between;
-            border-bottom: 1px solid white;
             margin: 1rem;
             padding: 1rem;
-            width: 90%;
+
+            @media screen and (min-width: 1024px) {
+                width: 90%;
+                border-bottom: 1px solid white;
+            }
+
+            &__list {
+
+            }
 
             &--smaller-no-underline {
                 border-bottom: none;

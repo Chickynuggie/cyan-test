@@ -21,7 +21,7 @@ $animationLength: 0.5s;
         cursor: pointer;
         @include black-shadow;
 
-        @media screen and (min-width: 1025px) {
+        @media screen and (min-width: 1024px) {
             width: 23rem;
             font-size: 1.25rem;
         }
@@ -58,7 +58,7 @@ $animationLength: 0.5s;
                 margin-bottom: 1rem;
                 @include black-shadow;
 
-                @media screen and (min-width: 1025px) {
+                @media screen and (min-width: 1024px) {
                     width: 6rem;
                     height: 6rem;
                 }
@@ -74,7 +74,7 @@ $animationLength: 0.5s;
                 white-space: nowrap;
 
 
-                @media screen and (min-width: 1025px) {
+                @media screen and (min-width: 1024px) {
                     width: 15rem;
                     font-size: 2rem;
                 }

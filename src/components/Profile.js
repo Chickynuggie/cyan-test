@@ -17,14 +17,14 @@ class Profile extends React.Component {
                     </div>
                     <div className='profile__card__column profile__card__column--wide'>
                         <div className='profile__card__info'>Recorded calls</div>
-                        <ol>{profile.calls.length ?
+                        <ol className='profile__card__info__list'>{profile.calls.length ?
                             profile.calls.map(call => <li key={call} className='profile__card__info--smaller-no-underline'>{call}</li>) :
                             <div className='profile__card__info profile__card__info--smaller-no-underline'>No recorded calls</div>}
                         </ol>
                     </div>
                     <div className='profile__card__column profile__card__column--wide'>
                         <div className='profile__card__info'>Recorded accounts</div>
-                        <ol>{profile.accounts.length ?
+                        <ol  className='profile__card__info__list'>{profile.accounts.length ?
                         profile.accounts.map(account => <li key={account} className='profile__card__info--smaller-no-underline'>{account}</li>) :
                         <div className='profile__card__info profile__card__info--smaller-no-underline'>No recorded accounts</div>}</ol>
                     </div>
