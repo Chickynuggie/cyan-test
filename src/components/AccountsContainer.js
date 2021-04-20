@@ -5,6 +5,7 @@ import Profile from './Profile';
 import AccountList from './AccountList';
 import HeaderWithPagination from './HeaderWithPagination';
 import Toaster from './Toaster';
+import Spinner from './Spinner';
 
 class AccountsContainer extends React.Component {
 
@@ -16,6 +17,7 @@ class AccountsContainer extends React.Component {
         const currentProfile = this.props.users ? this.props.users.find(user => this.props.currentProfileId === user.id) : null;
 
         return <div className='accounts-container'>
+            <Spinner isSpinning={this.props.isSpinning} />
             <Toaster toastMessage={this.props.toastMessage} />
             <HeaderWithPagination currentPage={this.props.currentPage}/>
             <Profile currentProfile={currentProfile}/>
@@ -29,7 +31,8 @@ const mapStateToProps = (state) => {
         users: state.userData,
         currentProfileId: state.selectedProfileId,
         currentPage: state.currentPage,
-        toastMessage: state.toastMessage
+        toastMessage: state.toastMessage,
+        isSpinning: state.isSpinning
     };
 };
 

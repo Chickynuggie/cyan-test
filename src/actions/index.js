@@ -35,3 +35,16 @@ export const popToastMessage = (message) => (dispatch) => {
         payload: message
     });
 }
+
+//not needed for now
+// export const startSpinning = () => dispatch => {
+//     dispatch({
+//         type: ACTIONTYPES.START_SPINNING
+//     });
+// };
+
+// export const stopSpinning = () => dispatch => {
+//     dispatch({
+//         type: ACTIONTYPES.STOP_SPINNING
+//     });
+// };
