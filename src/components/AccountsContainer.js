@@ -19,9 +19,9 @@ class AccountsContainer extends React.Component {
         return <div className='accounts-container'>
             <Spinner isSpinning={this.props.isSpinning} />
             <Toaster toastMessage={this.props.toastMessage} />
-            <HeaderWithPagination currentPage={this.props.currentPage}/>
-            <Profile currentProfile={currentProfile}/>
-            <AccountList pagedProfiles={this.props.users}/>
+            <HeaderWithPagination currentPage={this.props.currentPage} />
+            <Profile currentProfile={currentProfile} />
+            <AccountList pagedProfiles={this.props.users} />
         </div>;
     }
 }

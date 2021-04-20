@@ -18,19 +18,19 @@ import axios from 'axios';
 export const getUserData = (pageNumber = 1) => async (dispatch) => {
     const URL = `${userDataEndpointURL}?page=${pageNumber}&limit=${pageSize}`;
 
-    dispatch({type: ACTIONTYPES.START_SPINNING});
-    axios.get(URL).then( response => {
-        if(response.data.length) {
-            dispatch({ type: ACTIONTYPES.GET_USERS , payload: response.data});
-            dispatch({ type: ACTIONTYPES.SET_PAGENO , payload: pageNumber});
+    dispatch({ type: ACTIONTYPES.START_SPINNING });
+    axios.get(URL).then(response => {
+        if (response.data.length) {
+            dispatch({ type: ACTIONTYPES.GET_USERS, payload: response.data });
+            dispatch({ type: ACTIONTYPES.SET_PAGENO, payload: pageNumber });
         } else {
-            dispatch({type: ACTIONTYPES.POP_TOAST, payload: 'No more pages to load.'});
+            dispatch({ type: ACTIONTYPES.POP_TOAST, payload: 'No more pages to load.' });
         }
     }).catch((e) => {
-        dispatch({type: ACTIONTYPES.STOP_SPINNING});
-        dispatch({type: ACTIONTYPES.POP_TOAST, payload: e.message});
+        dispatch({ type: ACTIONTYPES.STOP_SPINNING });
+        dispatch({ type: ACTIONTYPES.POP_TOAST, payload: e.message });
     }).finally(() => {
-        dispatch({type: ACTIONTYPES.STOP_SPINNING});
+        dispatch({ type: ACTIONTYPES.STOP_SPINNING });
     });
 
 };

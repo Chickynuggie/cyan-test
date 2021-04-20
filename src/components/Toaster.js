@@ -4,11 +4,11 @@ import { popToastMessage } from '../actions/index';
 
 class Toaster extends React.Component {
     render() {
-        if(this.props.toastMessage) {
+        if (this.props.toastMessage) {
             return <div className='toaster'>
                 {this.props.toastMessage}
-                <div className='toaster__CTA' onClick={()=> this.props.popToastMessage('')}>Got it</div>
-                </div>;
+                <div className='toaster__CTA' onClick={() => this.props.popToastMessage('')}>Got it</div>
+            </div>;
         }
         return null;
     }

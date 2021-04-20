@@ -11,4 +11,4 @@ export default combineReducers({
     currentPage: paginatorReducer,
     toastMessage: toasterReducer,
     isSpinning: spinnerReducer
- });
+});
