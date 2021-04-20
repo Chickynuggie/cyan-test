@@ -24,3 +24,15 @@ export const clearUserSelection = () => (dispatch) => {
     });
 };
 
+export const goToNextPage = () => (dispatch) => {
+    dispatch({
+        type: ACTIONTYPES.INCREMENT_PAGENO
+    });
+};
+
+export const goToPreviousPage = () => (dispatch) => {
+    dispatch({
+        type: ACTIONTYPES.DECREMENT_PAGENO
+    });
+};
+

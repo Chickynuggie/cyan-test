@@ -1,0 +1,15 @@
+@import './colors.scss';
+
+.header-with-pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+    height: 6vh;
+    border-bottom: 2px double $darkgrey;
+
+    &__pager {
+        cursor: pointer;
+    }
+}

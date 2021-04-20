@@ -24,10 +24,8 @@ class AccountList extends React.Component {
     };
 }
 
-const mapStateToProps = (state) => {
-    return {
-        currentpage: state.currentpage
-    };
+const mapStateToProps = () => {
+    return { };
 };
 
 export default connect(mapStateToProps, { selectUser })(AccountList);
