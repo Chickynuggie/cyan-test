@@ -21,6 +21,7 @@
     text-align: center;
     transition: all;
     animation: appear .5s ease-in-out;
+    user-select: none;
 
     &__CTA {
         margin-top: 1rem;

@@ -1,4 +1,5 @@
 .spinner {
+    pointer-events: none;
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -8,9 +9,11 @@
     justify-content: center;
     align-items: center;
     background: rgba(0,0,0, 0.6);
+    user-select: none;
 
     &__animated-svg {
         width: 5rem;
         height: 5rem;
+        user-select: none;
     }
 }
