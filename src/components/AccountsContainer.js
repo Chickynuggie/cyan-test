@@ -26,7 +26,7 @@ const mapStateToProps = (state) => {
     return {
         users: state.userData,
         currentProfileId: state.selectedProfileId,
-        currentPage: 1
+        currentPage: state.currentPage
     };
 };
 
