@@ -9,7 +9,8 @@ class Profile extends React.Component {
 
         if(profile) {
             return  (<div className='profile' onClick={this.props.clearUserSelection}>
-                <div className='profile__card'>
+                <div className='profile__close'>Click to close</div>
+                <div className='profile__card' onClick={(e) => e.stopPropagation()}>
                     <div className='profile__card__column profile__card__column--narrow'>
                         <img className='profile__card__image' alt='avatar_big' src={`https://randomuser.me/api/portraits/women/${profile.id}.jpg`}></img>
                         <div className='profile__card__name'>{profile.name}</div>
