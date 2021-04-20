@@ -12,10 +12,12 @@ class AccountsContainer extends React.Component {
 
     render() {
         const currentProfile = this.props.users ? this.props.users.find(user => this.props.currentProfileId === user.id) : null;
+        const pageSize = 7;
+        const pagedProfiles = this.props.users.slice((this.props.currentPage - 1) * pageSize, this.props.currentPage * pageSize);
 
         return <div className='accounts-container'>
             <Profile currentProfile={currentProfile}/>
-            <AccountList />
+            <AccountList pagedProfiles={pagedProfiles}/>
         </div>;
     }
 }
@@ -23,7 +25,8 @@ class AccountsContainer extends React.Component {
 const mapStateToProps = (state) => {
     return {
         users: state.userData,
-        currentProfileId: state.selectedProfileId
+        currentProfileId: state.selectedProfileId,
+        currentPage: 1
     };
 };
 

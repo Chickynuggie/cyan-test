@@ -1,5 +1,74 @@
+@import './utilities.scss';
+
+$cardheight: 60vh;
+
 .profile {
-    width: 30vw;
+    width: 100vw;
     height: 100vh;
-    background: grey;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__card {
+        z-index: 2;
+        width: 60vw;
+        height: $cardheight;
+        background: $lightgrey;
+        border-radius: 5px;
+        padding: 0;
+        min-height: 500px;
+        min-width: 960px;
+        display: flex;
+        @include black-shadow;
+
+        &__column {
+            display: flex;
+            flex-direction: row;
+            padding: 1rem;
+            flex-direction: column;
+            align-items: center;
+
+            &--left {
+                width: 15vw;
+                display: flex;
+                border-right: 1px solid white;
+            }
+
+            &--right {
+                font-size: 2rem;
+                width: 90%;
+                padding-top: 0;
+                overflow-y: scroll;
+                overflow-x: hidden;
+            }
+        }
+
+        &__image {
+            width: 10rem;
+            height: 10rem;
+            border-radius: 100px;
+            border: 2px solid white;
+            @include black-shadow;
+        }
+
+        &__name {
+            font-size: 2rem;
+            margin: 2rem 0;
+            font-weight: bold;
+        }
+
+        &__info {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid white;
+            margin: 1rem;
+            padding: 1rem;
+            width: 90%;
+        }
+    }
 }
