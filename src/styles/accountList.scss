@@ -38,6 +38,7 @@ $animationLength: 0.5s;
             height: 2.5rem;
             color:white;
             opacity: 0;
+            font-size: inherit;
             transition: all $animationLength;
 
             .account-list__card:hover & {
