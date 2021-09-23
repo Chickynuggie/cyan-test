@@ -2,8 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import { clearUserSelection } from "../actions";
 
-const Profile = ({ profile, clearUserSelection }) =>
-  profile ? (
+const Profile = ({ currentProfile, clearUserSelection }) =>
+currentProfile ? (
     <div className="profile" onClick={clearUserSelection}>
       <div className="profile__close">Click to close</div>
       <div className="profile__card" onClick={(e) => e.stopPropagation()}>
@@ -11,15 +11,15 @@ const Profile = ({ profile, clearUserSelection }) =>
           <img
             className="profile__card__image"
             alt="avatar_big"
-            src={`https://randomuser.me/api/portraits/women/${profile.id}.jpg`}
+            src={`https://randomuser.me/api/portraits/women/${currentProfile.id}.jpg`}
           ></img>
-          <div className="profile__card__name">{profile.name}</div>
+          <div className="profile__card__name">{currentProfile.name}</div>
         </div>
         <div className="profile__card__column profile__card__column--wide">
           <div className="profile__card__info">Recorded calls</div>
           <ol className="profile__card__info__list">
-            {profile.calls.length ? (
-              profile.calls.map((call) => (
+            {currentProfile.calls.length ? (
+              currentProfile.calls.map((call) => (
                 <li
                   key={call}
                   className="profile__card__info--smaller-no-underline"
@@ -37,8 +37,8 @@ const Profile = ({ profile, clearUserSelection }) =>
         <div className="profile__card__column profile__card__column--wide">
           <div className="profile__card__info">Recorded accounts</div>
           <ol className="profile__card__info__list">
-            {profile.accounts.length ? (
-              profile.accounts.map((account) => (
+            {currentProfile.accounts.length ? (
+              currentProfile.accounts.map((account) => (
                 <li
                   key={account}
                   className="profile__card__info--smaller-no-underline"
