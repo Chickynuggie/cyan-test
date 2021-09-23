@@ -11,6 +11,9 @@
     border-bottom: 5px double $darkgrey;
     position: fixed;
     top: 0;
+    background: white;
+    z-index: 2;
+
 
     @media screen and (min-width: 1024px) {
         height: 6vh;
@@ -22,5 +25,7 @@
     &__pager {
         cursor: pointer;
         user-select: none;
+        min-width: 20%;
+        text-align: center;
     }
 }
