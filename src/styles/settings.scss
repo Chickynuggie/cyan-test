@@ -5,8 +5,6 @@
     src: url('https://scmedia.itsfogo.com/$-$/704834eac29e44b1a40f4784b982534c.ttf') format('truetype');
 }
 
-
-
 body {
     width: 100vw;
     height: 100vh;
@@ -14,8 +12,8 @@ body {
     box-sizing: border-box;
     font-family: roboto;
     margin: 0;
-    background-color: $darkgrey;
-    color: white;
+    background-color: white;
+    color: $darkgrey;
     font-size: 10px;
 }
 

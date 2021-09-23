@@ -16,13 +16,15 @@ class AccountsContainer extends React.Component {
     render() {
         const currentProfile = this.props.users ? this.props.users.find(user => this.props.currentProfileId === user.id) : null;
 
-        return <div className='accounts-container'>
-            <Spinner isSpinning={this.props.isSpinning} />
-            <Toaster toastMessage={this.props.toastMessage} />
+        return (<div>
             <HeaderWithPagination currentPage={this.props.currentPage} />
-            <Profile currentProfile={currentProfile} />
-            <AccountList pagedProfiles={this.props.users} />
-        </div>;
+            <div className='accounts-container'>
+                <Spinner isSpinning={this.props.isSpinning} />
+                <Toaster toastMessage={this.props.toastMessage} />
+                <Profile currentProfile={currentProfile} />
+                <AccountList pagedProfiles={this.props.users} />
+            </div>;
+        </div>)
     }
 }
 
